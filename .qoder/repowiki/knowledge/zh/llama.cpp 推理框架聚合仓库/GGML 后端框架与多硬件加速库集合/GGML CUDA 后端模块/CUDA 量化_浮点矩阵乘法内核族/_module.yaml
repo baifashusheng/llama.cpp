@@ -1,0 +1,17 @@
+schema_version: 1
+module_path: ggml_backend/backend_cuda/quantized_matmul
+title: CUDA 量化/浮点矩阵乘法内核族
+scope:
+    - ggml/src/ggml-cuda/mmq.cu
+    - ggml/src/ggml-cuda/mmq.cuh
+    - ggml/src/ggml-cuda/mmf.cu
+    - ggml/src/ggml-cuda/mmf.cuh
+    - ggml/src/ggml-cuda/mmvq.cu
+    - ggml/src/ggml-cuda/mmvq.cuh
+    - ggml/src/ggml-cuda/mmvf.cu
+    - ggml/src/ggml-cuda/mmvf.cuh
+    - ggml/src/ggml-cuda/mmid.cu
+    - ggml/src/ggml-cuda/mmid.cuh
+source_files: []
+depends_on: []
+related_to: []

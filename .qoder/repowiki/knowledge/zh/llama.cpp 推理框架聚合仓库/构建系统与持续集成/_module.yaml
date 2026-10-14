@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: build_system
+title: 构建系统与持续集成
+scope:
+    - cmake/
+    - scripts/
+    - .devops/
+    - ci/
+source_files: []
+depends_on: []
+related_to:
+    - path: docs

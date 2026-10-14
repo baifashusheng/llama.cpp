@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: ggml_backend/backend_sycl/misc_kernels
+title: SYCL 后端归一化、RoPE 与池化算子内核
+scope:
+    - ggml/src/ggml-sycl/norm.*
+    - ggml/src/ggml-sycl/rope.*
+    - ggml/src/ggml-sycl/pool.*
+source_files: []
+depends_on: []
+related_to: []

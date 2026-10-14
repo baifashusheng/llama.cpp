@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: ggml_backend/backend_cuda/template_instances
+title: CUDA 模板实例化代码生成
+scope:
+    - ggml/src/ggml-cuda/template-instances/
+source_files: []
+depends_on: []
+related_to: []

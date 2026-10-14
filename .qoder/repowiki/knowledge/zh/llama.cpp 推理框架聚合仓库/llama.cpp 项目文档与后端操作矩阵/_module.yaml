@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: docs
+title: llama.cpp 项目文档与后端操作矩阵
+scope:
+    - docs/
+source_files: []
+depends_on: []
+related_to:
+    - path: build_system

@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: cli_tools/server/server_decision_tools_mcp
+title: Server 决策模型与外部工具运行时
+scope:
+    - tools/server/server-decision.*
+    - tools/server/server-tools.*
+    - tools/server/server-mcp.*
+source_files: []
+depends_on: []
+related_to:
+    - path: cli_tools/server/server_http_proxy

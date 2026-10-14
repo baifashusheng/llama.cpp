@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: ggml_backend/accelerators_hip_musa
+title: HIP/MUSA GPU 后端适配层
+scope:
+    - ggml/src/ggml-hip/
+    - ggml/src/ggml-musa/
+source_files: []
+depends_on: []
+related_to: []

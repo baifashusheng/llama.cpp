@@ -1,0 +1,14 @@
+schema_version: 1
+module_path: ggml_backend/backend_cuda/flash_attention
+title: CUDA FlashAttention 实现
+scope:
+    - ggml/src/ggml-cuda/fattn.cu
+    - ggml/src/ggml-cuda/fattn.cuh
+    - ggml/src/ggml-cuda/fattn-common.cuh
+    - ggml/src/ggml-cuda/fattn-mma-f16.cuh
+    - ggml/src/ggml-cuda/fattn-tile.cu
+    - ggml/src/ggml-cuda/fattn-tile.cuh
+    - ggml/src/ggml-cuda/fattn-vec.cuh
+source_files: []
+depends_on: []
+related_to: []

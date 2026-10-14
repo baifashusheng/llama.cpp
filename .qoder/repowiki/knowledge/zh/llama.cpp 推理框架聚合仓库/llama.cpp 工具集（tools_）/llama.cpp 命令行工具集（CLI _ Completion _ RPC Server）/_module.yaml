@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: cli_tools/cli_tools
+title: llama.cpp 命令行工具集（CLI / Completion / RPC Server）
+scope:
+    - tools/cli/
+    - tools/completion/
+    - tools/rpc/
+source_files: []
+depends_on: []
+related_to:
+    - path: ggml_backend/backend_rpc

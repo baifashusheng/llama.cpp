@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: cli_tools/server/server_chat
+title: 服务端聊天协议转换与参数 Schema 解析
+scope:
+    - tools/server/server-chat.*
+    - tools/server/server-schema.*
+source_files: []
+depends_on: []
+related_to:
+    - path: cli_tools/server/server_streaming_queue_task

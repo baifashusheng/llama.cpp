@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: ggml_backend/backend_virtgpu
+title: VirtGPU/Virglrenderer API Remoting 后端
+scope:
+    - ggml/src/ggml-virtgpu/
+source_files: []
+depends_on: []
+related_to:
+    - path: ggml_backend/core_runtime

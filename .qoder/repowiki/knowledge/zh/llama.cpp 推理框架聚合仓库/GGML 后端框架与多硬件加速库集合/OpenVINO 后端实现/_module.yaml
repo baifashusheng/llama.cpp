@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: ggml_backend/backend_openvino
+title: OpenVINO 后端实现
+scope:
+    - ggml/src/ggml-openvino/
+source_files: []
+depends_on: []
+related_to:
+    - path: ggml_backend/core_runtime

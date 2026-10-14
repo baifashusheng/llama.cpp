@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: ggml_backend/backend_cpu/core_runtime
+title: GGML CPU 后端核心运行时与矩阵乘优化内核
+scope:
+    - ggml/src/ggml-cpu/
+    - ggml/src/ggml-cpu/amx/
+    - ggml/src/ggml-cpu/tiled/
+source_files: []
+depends_on: []
+related_to: []

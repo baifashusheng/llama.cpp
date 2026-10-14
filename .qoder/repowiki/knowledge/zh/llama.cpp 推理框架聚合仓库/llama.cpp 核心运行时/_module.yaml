@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: llama_core
+title: llama.cpp 核心运行时
+scope:
+    - src/
+source_files: []
+depends_on: []
+related_to:
+    - path: cli_tools/data_tools
+    - path: cli_tools/inference_benchmarks
+    - path: cli_tools/quantization_tools
+    - path: examples
+    - path: tests

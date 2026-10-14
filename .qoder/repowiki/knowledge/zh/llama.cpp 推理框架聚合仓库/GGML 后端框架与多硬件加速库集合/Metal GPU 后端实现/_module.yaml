@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: ggml_backend/backend_metal
+title: Metal GPU 后端实现
+scope:
+    - ggml/src/ggml-metal/
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,23 @@
+schema_version: 1
+module_path: llama_core/model_loader_saver
+title: 模型加载/保存与架构元数据层
+scope:
+    - src/llama-model-loader.cpp
+    - src/llama-model-loader.h
+    - src/llama-model-saver.cpp
+    - src/llama-model-saver.h
+    - src/llama-model.cpp
+    - src/llama-model.h
+    - src/llama-arch.cpp
+    - src/llama-arch.h
+    - src/llama-hparams.cpp
+    - src/llama-hparams.h
+    - src/llama-cparams.cpp
+    - src/llama-cparams.h
+    - src/llama-impl.cpp
+    - src/llama-impl.h
+    - src/llama-mmap.cpp
+    - src/llama-mmap.h
+source_files: []
+depends_on: []
+related_to: []

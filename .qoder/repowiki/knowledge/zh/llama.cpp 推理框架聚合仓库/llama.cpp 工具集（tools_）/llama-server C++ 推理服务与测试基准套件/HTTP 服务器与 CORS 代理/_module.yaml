@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: cli_tools/server/server_http_proxy
+title: HTTP 服务器与 CORS 代理
+scope:
+    - tools/server/server-http.*
+    - tools/server/server-cors-proxy.h
+source_files: []
+depends_on: []
+related_to:
+    - path: cli_tools/server/server_decision_tools_mcp
+    - path: cli_tools/server/tests

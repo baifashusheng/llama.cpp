@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: llama_core/model_registry
+title: 模型架构注册表与图构建实现
+scope:
+    - src/models/
+source_files: []
+depends_on: []
+related_to: []

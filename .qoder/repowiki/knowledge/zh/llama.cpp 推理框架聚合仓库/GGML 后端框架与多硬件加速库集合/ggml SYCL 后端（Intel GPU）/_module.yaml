@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: ggml_backend/backend_sycl
+title: ggml SYCL 后端（Intel GPU）
+scope:
+    - ggml/src/ggml-sycl/
+source_files: []
+depends_on: []
+related_to: []

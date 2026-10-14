@@ -1,0 +1,926 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: master
+nodes_managed: true
+exported_at: "2026-10-19T12:34:14Z"
+modules:
+    "":
+        dir_name: llama.cpp 推理框架聚合仓库
+        title: llama.cpp 推理框架聚合仓库
+        scope:
+            - README.md
+            - CONTRIBUTING.md
+            - SECURITY.md
+            - AGENTS.md
+            - CLAUDE.md
+            - Makefile
+            - CMakeLists.txt
+            - CMakePresets.json
+            - pyproject.toml
+            - requirements.txt
+            - flake.nix
+            - .gitignore
+            - .clang-format
+            - .clang-tidy
+            - .pre-commit-config.yaml
+            - .dockerignore
+            - .ecrc
+            - .editorconfig
+            - .flake8
+            - .gitmodules
+            - AUTHORS
+            - CODEOWNERS
+            - LICENSE
+            - convert_hf_to_gguf.py
+            - convert_hf_to_gguf_update.py
+            - convert_llama_ggml_to_gguf.py
+            - convert_lora_to_gguf.py
+            - mypy.ini
+            - pyrightconfig.json
+            - ty.toml
+        source_files: []
+        children:
+            - assets_and_templates
+            - build_system
+            - cli_tools
+            - common_lib
+            - docs
+            - examples
+            - ggml_backend
+            - gguf_py
+            - llama_core
+            - model_converters
+            - tests
+        depends_on: []
+        related_to: []
+    assets_and_templates:
+        dir_name: 模型对话模板与 GBNF 语法资源
+        title: 模型对话模板与 GBNF 语法资源
+        scope:
+            - models/templates/
+            - grammars/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: common_lib
+    build_system:
+        dir_name: 构建系统与持续集成
+        title: 构建系统与持续集成
+        scope:
+            - cmake/
+            - scripts/
+            - .devops/
+            - ci/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: docs
+    cli_tools:
+        dir_name: llama.cpp 工具集（tools_）
+        title: llama.cpp 工具集（tools/）
+        scope:
+            - tools/
+        source_files: []
+        children:
+            - cli_tools/cli_tools
+            - cli_tools/data_tools
+            - cli_tools/inference_benchmarks
+            - cli_tools/mtmd
+            - cli_tools/quantization_tools
+            - cli_tools/server
+            - cli_tools/tuning
+            - cli_tools/ui
+        depends_on: []
+        related_to: []
+    cli_tools/cli_tools:
+        dir_name: llama.cpp 命令行工具集（CLI _ Completion _ RPC Server）
+        title: llama.cpp 命令行工具集（CLI / Completion / RPC Server）
+        scope:
+            - tools/cli/
+            - tools/completion/
+            - tools/rpc/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: ggml_backend/backend_rpc
+    cli_tools/data_tools:
+        dir_name: llama.cpp 辅助工具集（参数拟合、GGUF 拆分合并、imatrix、分词、TTS）
+        title: llama.cpp 辅助工具集（参数拟合、GGUF 拆分合并、imatrix、分词、TTS）
+        scope:
+            - tools/fit-params/
+            - tools/gguf-split/
+            - tools/imatrix/
+            - tools/tokenize/
+            - tools/tts/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: llama_core
+    cli_tools/inference_benchmarks:
+        dir_name: 推理基准与结果工具集
+        title: 推理基准与结果工具集
+        scope:
+            - tools/llama-bench/
+            - tools/batched-bench/
+            - tools/perplexity/
+            - tools/results/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: llama_core
+    cli_tools/mtmd:
+        dir_name: llama.cpp MTMD 多模态推理子系统
+        title: llama.cpp MTMD 多模态推理子系统
+        scope:
+            - tools/mtmd/
+        source_files: []
+        children:
+            - cli_tools/mtmd/clip_core
+            - cli_tools/mtmd/helper_and_runtime
+            - cli_tools/mtmd/image_backend
+            - cli_tools/mtmd/legacy_model_converters
+            - cli_tools/mtmd/tests_and_samples
+        depends_on: []
+        related_to: []
+    cli_tools/mtmd/clip_core:
+        dir_name: CLIP_多模态模型推理核心
+        title: CLIP/多模态模型推理核心
+        scope:
+            - tools/mtmd/clip.cpp
+            - tools/mtmd/clip.h
+            - tools/mtmd/clip-impl.h
+            - tools/mtmd/clip-graph.h
+            - tools/mtmd/clip-model.h
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: cli_tools/mtmd/helper_and_runtime
+            - path: cli_tools/mtmd/image_backend
+    cli_tools/mtmd/helper_and_runtime:
+        dir_name: mtmd 多模态推理库与辅助工具
+        title: mtmd 多模态推理库与辅助工具
+        scope:
+            - tools/mtmd/mtmd-helper.cpp
+            - tools/mtmd/mtmd-helper-gen.cpp
+            - tools/mtmd/mtmd-helper.h
+            - tools/mtmd/mtmd-helper-common.h
+            - tools/mtmd/mtmd-internal.h
+            - tools/mtmd/mtmd.cpp
+            - tools/mtmd/mtmd.h
+            - tools/mtmd/mtmd-cli.cpp
+            - tools/mtmd/deprecation-warning.cpp
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: cli_tools/mtmd/clip_core
+            - path: cli_tools/mtmd/tests_and_samples
+    cli_tools/mtmd/image_backend:
+        dir_name: MTMD 多模态图像后端（预处理与模型图构建）
+        title: MTMD 多模态图像后端（预处理与模型图构建）
+        scope:
+            - tools/mtmd/models/
+            - tools/mtmd/mtmd-image.cpp
+            - tools/mtmd/mtmd-image.h
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: cli_tools/mtmd/clip_core
+    cli_tools/mtmd/legacy_model_converters:
+        dir_name: 遗留多模态模型转换工具集
+        title: 遗留多模态模型转换工具集
+        scope:
+            - tools/mtmd/legacy-models/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    cli_tools/mtmd/tests_and_samples:
+        dir_name: DeepSeek-OCR 回归测试与评测脚本
+        title: DeepSeek-OCR 回归测试与评测脚本
+        scope:
+            - tools/mtmd/tests/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: cli_tools/mtmd/helper_and_runtime
+    cli_tools/quantization_tools:
+        dir_name: 模型量化与向量工具集
+        title: 模型量化与向量工具集
+        scope:
+            - tools/quantize/
+            - tools/export-lora/
+            - tools/cvector-generator/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: llama_core
+    cli_tools/server:
+        dir_name: llama-server C++ 推理服务与测试基准套件
+        title: llama-server C++ 推理服务与测试基准套件
+        scope:
+            - tools/server/
+        source_files: []
+        children:
+            - cli_tools/server/benchmarks
+            - cli_tools/server/server_chat
+            - cli_tools/server/server_decision_tools_mcp
+            - cli_tools/server/server_http_proxy
+            - cli_tools/server/server_streaming_queue_task
+            - cli_tools/server/tests
+        depends_on: []
+        related_to:
+            - path: cli_tools/ui
+    cli_tools/server/benchmarks:
+        dir_name: llama-server 基准测试工具集
+        title: llama-server 基准测试工具集
+        scope:
+            - tools/server/bench/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: cli_tools/server/server_streaming_queue_task
+    cli_tools/server/server_chat:
+        dir_name: 服务端聊天协议转换与参数 Schema 解析
+        title: 服务端聊天协议转换与参数 Schema 解析
+        scope:
+            - tools/server/server-chat.*
+            - tools/server/server-schema.*
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: cli_tools/server/server_streaming_queue_task
+    cli_tools/server/server_decision_tools_mcp:
+        dir_name: Server 决策模型与外部工具运行时
+        title: Server 决策模型与外部工具运行时
+        scope:
+            - tools/server/server-decision.*
+            - tools/server/server-tools.*
+            - tools/server/server-mcp.*
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: cli_tools/server/server_http_proxy
+    cli_tools/server/server_http_proxy:
+        dir_name: HTTP 服务器与 CORS 代理
+        title: HTTP 服务器与 CORS 代理
+        scope:
+            - tools/server/server-http.*
+            - tools/server/server-cors-proxy.h
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: cli_tools/server/server_decision_tools_mcp
+            - path: cli_tools/server/tests
+    cli_tools/server/server_streaming_queue_task:
+        dir_name: 服务端流式生成、任务队列与响应管道
+        title: 服务端流式生成、任务队列与响应管道
+        scope:
+            - tools/server/server-stream.*
+            - tools/server/server-queue.*
+            - tools/server/server-task.*
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: cli_tools/server/benchmarks
+            - path: cli_tools/server/server_chat
+    cli_tools/server/tests:
+        dir_name: llama-server Python 集成测试套件
+        title: llama-server Python 集成测试套件
+        scope:
+            - tools/server/tests/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: cli_tools/server/server_http_proxy
+    cli_tools/tuning:
+        dir_name: ggml-metal 离线内核参数调优器
+        title: ggml-metal 离线内核参数调优器
+        scope:
+            - tools/tuning/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    cli_tools/ui:
+        dir_name: llama-ui Web 前端（SvelteKit + PWA）
+        title: llama-ui Web 前端（SvelteKit + PWA）
+        scope:
+            - tools/ui/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: cli_tools/server
+    common_lib:
+        dir_name: llama.cpp 公共基础库 (common)
+        title: llama.cpp 公共基础库 (common)
+        scope:
+            - common/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: assets_and_templates
+    docs:
+        dir_name: llama.cpp 项目文档与后端操作矩阵
+        title: llama.cpp 项目文档与后端操作矩阵
+        scope:
+            - docs/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: build_system
+    examples:
+        dir_name: llama.cpp 示例与参考实现集合
+        title: llama.cpp 示例与参考实现集合
+        scope:
+            - examples/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: llama_core
+    ggml_backend:
+        dir_name: GGML 后端框架与多硬件加速库集合
+        title: GGML 后端框架与多硬件加速库集合
+        scope:
+            - ggml/
+        source_files: []
+        children:
+            - ggml_backend/accelerators_blas_zendnn_zdnn
+            - ggml_backend/accelerators_hip_musa
+            - ggml_backend/backend_cann
+            - ggml_backend/backend_cpu
+            - ggml_backend/backend_cuda
+            - ggml_backend/backend_et
+            - ggml_backend/backend_hexagon
+            - ggml_backend/backend_metal
+            - ggml_backend/backend_opencl
+            - ggml_backend/backend_openvino
+            - ggml_backend/backend_rpc
+            - ggml_backend/backend_sycl
+            - ggml_backend/backend_virtgpu
+            - ggml_backend/backend_vulkan
+            - ggml_backend/backend_webgpu
+            - ggml_backend/core_runtime
+        depends_on: []
+        related_to:
+            - path: tests
+    ggml_backend/accelerators_blas_zendnn_zdnn:
+        dir_name: GGML BLAS_ZenDNN_Intel ZDNN 后端加速器
+        title: GGML BLAS/ZenDNN/Intel ZDNN 后端加速器
+        scope:
+            - ggml/src/ggml-blas/
+            - ggml/src/ggml-zendnn/
+            - ggml/src/ggml-zdnn/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: ggml_backend/core_runtime
+    ggml_backend/accelerators_hip_musa:
+        dir_name: HIP_MUSA GPU 后端适配层
+        title: HIP/MUSA GPU 后端适配层
+        scope:
+            - ggml/src/ggml-hip/
+            - ggml/src/ggml-musa/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_cann:
+        dir_name: Ascend CANN 后端实现
+        title: Ascend CANN 后端实现
+        scope:
+            - ggml/src/ggml-cann/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: ggml_backend/core_runtime
+    ggml_backend/backend_cpu:
+        dir_name: GGML CPU 后端（多架构 SIMD_矩阵乘内核聚合）
+        title: GGML CPU 后端（多架构 SIMD/矩阵乘内核聚合）
+        scope:
+            - ggml/src/ggml-cpu/
+        source_files: []
+        children:
+            - ggml_backend/backend_cpu/arch_simd
+            - ggml_backend/backend_cpu/core_runtime
+            - ggml_backend/backend_cpu/vendor_extensions
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_cpu/arch_simd:
+        dir_name: CPU 架构 SIMD 后端实现
+        title: CPU 架构 SIMD 后端实现
+        scope:
+            - ggml/src/ggml-cpu/arch/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_cpu/core_runtime:
+        dir_name: GGML CPU 后端核心运行时与矩阵乘优化内核
+        title: GGML CPU 后端核心运行时与矩阵乘优化内核
+        scope:
+            - ggml/src/ggml-cpu/
+            - ggml/src/ggml-cpu/amx/
+            - ggml/src/ggml-cpu/tiled/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_cpu/vendor_extensions:
+        dir_name: CPU 后端厂商扩展内核（KleidiAI _ Llamafile _ SpaceMiT）
+        title: CPU 后端厂商扩展内核（KleidiAI / Llamafile / SpaceMiT）
+        scope:
+            - ggml/src/ggml-cpu/kleidiai/
+            - ggml/src/ggml-cpu/llamafile/
+            - ggml/src/ggml-cpu/spacemit/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_cuda:
+        dir_name: GGML CUDA 后端模块
+        title: GGML CUDA 后端模块
+        scope:
+            - ggml/src/ggml-cuda/
+        source_files: []
+        children:
+            - ggml_backend/backend_cuda/flash_attention
+            - ggml_backend/backend_cuda/kernel_dispatch
+            - ggml_backend/backend_cuda/quantized_matmul
+            - ggml_backend/backend_cuda/template_instances
+            - ggml_backend/backend_cuda/vendor_backends
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_cuda/flash_attention:
+        dir_name: CUDA FlashAttention 实现
+        title: CUDA FlashAttention 实现
+        scope:
+            - ggml/src/ggml-cuda/fattn.cu
+            - ggml/src/ggml-cuda/fattn.cuh
+            - ggml/src/ggml-cuda/fattn-common.cuh
+            - ggml/src/ggml-cuda/fattn-mma-f16.cuh
+            - ggml/src/ggml-cuda/fattn-tile.cu
+            - ggml/src/ggml-cuda/fattn-tile.cuh
+            - ggml/src/ggml-cuda/fattn-vec.cuh
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_cuda/kernel_dispatch:
+        dir_name: GGML CUDA 后端内核实现与模板实例化
+        title: GGML CUDA 后端内核实现与模板实例化
+        scope:
+            - ggml/src/ggml-cuda/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_cuda/quantized_matmul:
+        dir_name: CUDA 量化_浮点矩阵乘法内核族
+        title: CUDA 量化/浮点矩阵乘法内核族
+        scope:
+            - ggml/src/ggml-cuda/mmq.cu
+            - ggml/src/ggml-cuda/mmq.cuh
+            - ggml/src/ggml-cuda/mmf.cu
+            - ggml/src/ggml-cuda/mmf.cuh
+            - ggml/src/ggml-cuda/mmvq.cu
+            - ggml/src/ggml-cuda/mmvq.cuh
+            - ggml/src/ggml-cuda/mmvf.cu
+            - ggml/src/ggml-cuda/mmvf.cuh
+            - ggml/src/ggml-cuda/mmid.cu
+            - ggml/src/ggml-cuda/mmid.cuh
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_cuda/template_instances:
+        dir_name: CUDA 模板实例化代码生成
+        title: CUDA 模板实例化代码生成
+        scope:
+            - ggml/src/ggml-cuda/template-instances/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_cuda/vendor_backends:
+        dir_name: CUDA_HIP_MUSA 后端厂商适配头文件
+        title: CUDA/HIP/MUSA 后端厂商适配头文件
+        scope:
+            - ggml/src/ggml-cuda/vendors/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_et:
+        dir_name: Esperanto ET 后端实现
+        title: Esperanto ET 后端实现
+        scope:
+            - ggml/src/ggml-et/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: ggml_backend/core_runtime
+    ggml_backend/backend_hexagon:
+        dir_name: Qualcomm Hexagon HTP 后端实现
+        title: Qualcomm Hexagon HTP 后端实现
+        scope:
+            - ggml/src/ggml-hexagon/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: ggml_backend/core_runtime
+    ggml_backend/backend_metal:
+        dir_name: Metal GPU 后端实现
+        title: Metal GPU 后端实现
+        scope:
+            - ggml/src/ggml-metal/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_opencl:
+        dir_name: OpenCL 后端实现 (ggml-backend-opencl)
+        title: OpenCL 后端实现 (ggml-backend-opencl)
+        scope:
+            - ggml/src/ggml-opencl/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_openvino:
+        dir_name: OpenVINO 后端实现
+        title: OpenVINO 后端实现
+        scope:
+            - ggml/src/ggml-openvino/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: ggml_backend/core_runtime
+    ggml_backend/backend_rpc:
+        dir_name: ggml RPC 后端（TCP_RDMA 传输层）
+        title: ggml RPC 后端（TCP/RDMA 传输层）
+        scope:
+            - ggml/src/ggml-rpc/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: cli_tools/cli_tools
+    ggml_backend/backend_sycl:
+        dir_name: ggml SYCL 后端（Intel GPU）
+        title: ggml SYCL 后端（Intel GPU）
+        scope:
+            - ggml/src/ggml-sycl/
+        source_files: []
+        children:
+            - ggml_backend/backend_sycl/attention_kernels
+            - ggml_backend/backend_sycl/convolution_kernels
+            - ggml_backend/backend_sycl/core_infrastructure
+            - ggml_backend/backend_sycl/elementwise_reduction_kernels
+            - ggml_backend/backend_sycl/fusion_runtime
+            - ggml_backend/backend_sycl/linear_algebra_kernels
+            - ggml_backend/backend_sycl/memory_and_hardware
+            - ggml_backend/backend_sycl/misc_kernels
+            - ggml_backend/backend_sycl/quantized_matmul_kernels
+            - ggml_backend/backend_sycl/tensor_manipulation_kernels
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_sycl/attention_kernels:
+        dir_name: SYCL Flash-Attention 内核调度与稀疏化
+        title: SYCL Flash-Attention 内核调度与稀疏化
+        scope:
+            - ggml/src/ggml-sycl/fattn.cpp
+            - ggml/src/ggml-sycl/fattn-tile.cpp
+            - ggml/src/ggml-sycl/fattn-sparse.cpp
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_sycl/convolution_kernels:
+        dir_name: SYCL 卷积与 im2col 内核实现
+        title: SYCL 卷积与 im2col 内核实现
+        scope:
+            - ggml/src/ggml-sycl/conv*.cpp
+            - ggml/src/ggml-sycl/conv*.hpp
+            - ggml/src/ggml-sycl/im2col.*
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_sycl/core_infrastructure:
+        dir_name: ggml-sycl 后端核心基础设施
+        title: ggml-sycl 后端核心基础设施
+        scope:
+            - ggml/src/ggml-sycl/backend.hpp
+            - ggml/src/ggml-sycl/base.hpp
+            - ggml/src/ggml-sycl/common.*
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_sycl/elementwise_reduction_kernels:
+        dir_name: SYCL 元素级归约与损失内核
+        title: SYCL 元素级归约与损失内核
+        scope:
+            - ggml/src/ggml-sycl/element_wise.*
+            - ggml/src/ggml-sycl/softmax.*
+            - ggml/src/ggml-sycl/cross_entropy_loss.*
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_sycl/fusion_runtime:
+        dir_name: SYCL Fusion、Lightning Indexer 与优化器步内核
+        title: SYCL Fusion、Lightning Indexer 与优化器步内核
+        scope:
+            - ggml/src/ggml-sycl/fusion.*
+            - ggml/src/ggml-sycl/lightning-indexer.*
+            - ggml/src/ggml-sycl/opt-step.*
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_sycl/linear_algebra_kernels:
+        dir_name: SYCL GEMM 与 Dequantize-MatVec 内核
+        title: SYCL GEMM 与 Dequantize-MatVec 内核
+        scope:
+            - ggml/src/ggml-sycl/fused-gemm.*
+            - ggml/src/ggml-sycl/gemm.hpp
+            - ggml/src/ggml-sycl/dmmv.*
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_sycl/memory_and_hardware:
+        dir_name: SYCL 后端内存与硬件信息探测
+        title: SYCL 后端内存与硬件信息探测
+        scope:
+            - ggml/src/ggml-sycl/mem.*
+            - ggml/src/ggml-sycl/memtrace.*
+            - ggml/src/ggml-sycl/sycl_hw.*
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_sycl/misc_kernels:
+        dir_name: SYCL 后端归一化、RoPE 与池化算子内核
+        title: SYCL 后端归一化、RoPE 与池化算子内核
+        scope:
+            - ggml/src/ggml-sycl/norm.*
+            - ggml/src/ggml-sycl/rope.*
+            - ggml/src/ggml-sycl/pool.*
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_sycl/quantized_matmul_kernels:
+        dir_name: GGML SYCL 量化矩阵_向量乘内核与反量化原语
+        title: GGML SYCL 量化矩阵/向量乘内核与反量化原语
+        scope:
+            - ggml/src/ggml-sycl/mmq.*
+            - ggml/src/ggml-sycl/mmvq.*
+            - ggml/src/ggml-sycl/dequantize.hpp
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_sycl/tensor_manipulation_kernels:
+        dir_name: SYCL 张量复制、广播与逐元素算子内核
+        title: SYCL 张量复制、广播与逐元素算子内核
+        scope:
+            - ggml/src/ggml-sycl/cpy.*
+            - ggml/src/ggml-sycl/binbcast.*
+            - ggml/src/ggml-sycl/add-id.*
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_virtgpu:
+        dir_name: VirtGPU_Virglrenderer API Remoting 后端
+        title: VirtGPU/Virglrenderer API Remoting 后端
+        scope:
+            - ggml/src/ggml-virtgpu/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: ggml_backend/core_runtime
+    ggml_backend/backend_vulkan:
+        dir_name: GGML Vulkan GPU 后端
+        title: GGML Vulkan GPU 后端
+        scope:
+            - ggml/src/ggml-vulkan/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/backend_webgpu:
+        dir_name: WebGPU 后端实现
+        title: WebGPU 后端实现
+        scope:
+            - ggml/src/ggml-webgpu/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    ggml_backend/core_runtime:
+        dir_name: GGML 后端运行时与多设备调度核心
+        title: GGML 后端运行时与多设备调度核心
+        scope:
+            - ggml/src/
+            - ggml/include/
+            - ggml/cmake/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: ggml_backend/accelerators_blas_zendnn_zdnn
+            - path: ggml_backend/backend_cann
+            - path: ggml_backend/backend_et
+            - path: ggml_backend/backend_hexagon
+            - path: ggml_backend/backend_openvino
+            - path: ggml_backend/backend_virtgpu
+    gguf_py:
+        dir_name: GGUF 格式 Python 读写库
+        title: GGUF 格式 Python 读写库
+        scope:
+            - gguf-py/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: model_converters
+    llama_core:
+        dir_name: llama.cpp 核心运行时
+        title: llama.cpp 核心运行时
+        scope:
+            - src/
+        source_files: []
+        children:
+            - llama_core/graph_batch_context
+            - llama_core/kv_cache_memory
+            - llama_core/model_loader_saver
+            - llama_core/model_registry
+            - llama_core/quant_and_core
+            - llama_core/sampler_tokenizer
+        depends_on: []
+        related_to:
+            - path: cli_tools/data_tools
+            - path: cli_tools/inference_benchmarks
+            - path: cli_tools/quantization_tools
+            - path: examples
+            - path: tests
+    llama_core/graph_batch_context:
+        dir_name: 推理图构建与批处理上下文
+        title: 推理图构建与批处理上下文
+        scope:
+            - src/llama-graph.cpp
+            - src/llama-graph.h
+            - src/llama-batch.cpp
+            - src/llama-batch.h
+            - src/llama-context.cpp
+            - src/llama-context.h
+            - src/llama-chat.cpp
+            - src/llama-chat.h
+            - src/llama-io.cpp
+            - src/llama-io.h
+            - src/llama-ext.h
+            - src/llama-adapter.cpp
+            - src/llama-adapter.h
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    llama_core/kv_cache_memory:
+        dir_name: KV Cache 与 LLM 内存抽象层
+        title: KV Cache 与 LLM 内存抽象层
+        scope:
+            - src/llama-kv-cache.cpp
+            - src/llama-kv-cache.h
+            - src/llama-kv-cache-dsa.cpp
+            - src/llama-kv-cache-dsv4.cpp
+            - src/llama-kv-cache-iswa.cpp
+            - src/llama-kv-cache-msa.cpp
+            - src/llama-kv-cache-dsa-iswa.cpp
+            - src/llama-kv-cells.h
+            - src/llama-memory.cpp
+            - src/llama-memory.h
+            - src/llama-memory-hybrid.cpp
+            - src/llama-memory-hybrid-idx.cpp
+            - src/llama-memory-hybrid-iswa.cpp
+            - src/llama-memory-recurrent.cpp
+            - src/llama-moe-cache.cpp
+            - src/llama-moe-cache.h
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    llama_core/model_loader_saver:
+        dir_name: 模型加载_保存与架构元数据层
+        title: 模型加载/保存与架构元数据层
+        scope:
+            - src/llama-model-loader.cpp
+            - src/llama-model-loader.h
+            - src/llama-model-saver.cpp
+            - src/llama-model-saver.h
+            - src/llama-model.cpp
+            - src/llama-model.h
+            - src/llama-arch.cpp
+            - src/llama-arch.h
+            - src/llama-hparams.cpp
+            - src/llama-hparams.h
+            - src/llama-cparams.cpp
+            - src/llama-cparams.h
+            - src/llama-impl.cpp
+            - src/llama-impl.h
+            - src/llama-mmap.cpp
+            - src/llama-mmap.h
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    llama_core/model_registry:
+        dir_name: 模型架构注册表与图构建实现
+        title: 模型架构注册表与图构建实现
+        scope:
+            - src/models/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    llama_core/quant_and_core:
+        dir_name: 模型量化与核心库构建
+        title: 模型量化与核心库构建
+        scope:
+            - src/llama-quant.cpp
+            - src/llama-quant.h
+            - src/llama.cpp
+            - src/CMakeLists.txt
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    llama_core/sampler_tokenizer:
+        dir_name: 采样器、词表与语法约束核心
+        title: 采样器、词表与语法约束核心
+        scope:
+            - src/llama-sampler.cpp
+            - src/llama-sampler.h
+            - src/llama-grammar.cpp
+            - src/llama-grammar.h
+            - src/llama-vocab.cpp
+            - src/llama-vocab.h
+            - src/unicode.cpp
+            - src/unicode.h
+            - src/unicode-data.cpp
+            - src/unicode-data.h
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    model_converters:
+        dir_name: HuggingFace 模型到 GGUF 转换器
+        title: HuggingFace 模型到 GGUF 转换器
+        scope:
+            - conversion/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: gguf_py
+    tests:
+        dir_name: llama.cpp 测试套件与测试基础设施
+        title: llama.cpp 测试套件与测试基础设施
+        scope:
+            - tests/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: ggml_backend
+            - path: llama_core

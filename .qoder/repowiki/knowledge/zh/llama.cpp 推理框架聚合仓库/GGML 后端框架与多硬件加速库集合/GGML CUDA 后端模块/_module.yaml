@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: ggml_backend/backend_cuda
+title: GGML CUDA 后端模块
+scope:
+    - ggml/src/ggml-cuda/
+source_files: []
+depends_on: []
+related_to: []

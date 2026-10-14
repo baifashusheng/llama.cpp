@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: ggml_backend/backend_sycl/convolution_kernels
+title: SYCL 卷积与 im2col 内核实现
+scope:
+    - ggml/src/ggml-sycl/conv*.cpp
+    - ggml/src/ggml-sycl/conv*.hpp
+    - ggml/src/ggml-sycl/im2col.*
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: cli_tools/mtmd/tests_and_samples
+title: DeepSeek-OCR 回归测试与评测脚本
+scope:
+    - tools/mtmd/tests/
+source_files: []
+depends_on: []
+related_to:
+    - path: cli_tools/mtmd/helper_and_runtime

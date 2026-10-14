@@ -1,0 +1,18 @@
+schema_version: 1
+module_path: cli_tools/mtmd/helper_and_runtime
+title: mtmd 多模态推理库与辅助工具
+scope:
+    - tools/mtmd/mtmd-helper.cpp
+    - tools/mtmd/mtmd-helper-gen.cpp
+    - tools/mtmd/mtmd-helper.h
+    - tools/mtmd/mtmd-helper-common.h
+    - tools/mtmd/mtmd-internal.h
+    - tools/mtmd/mtmd.cpp
+    - tools/mtmd/mtmd.h
+    - tools/mtmd/mtmd-cli.cpp
+    - tools/mtmd/deprecation-warning.cpp
+source_files: []
+depends_on: []
+related_to:
+    - path: cli_tools/mtmd/clip_core
+    - path: cli_tools/mtmd/tests_and_samples

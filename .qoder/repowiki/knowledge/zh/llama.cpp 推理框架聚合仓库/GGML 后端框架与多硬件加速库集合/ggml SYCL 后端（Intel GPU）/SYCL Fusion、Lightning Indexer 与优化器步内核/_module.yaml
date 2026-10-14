@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: ggml_backend/backend_sycl/fusion_runtime
+title: SYCL Fusion、Lightning Indexer 与优化器步内核
+scope:
+    - ggml/src/ggml-sycl/fusion.*
+    - ggml/src/ggml-sycl/lightning-indexer.*
+    - ggml/src/ggml-sycl/opt-step.*
+source_files: []
+depends_on: []
+related_to: []

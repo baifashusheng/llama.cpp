@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: cli_tools/mtmd/legacy_model_converters
+title: 遗留多模态模型转换工具集
+scope:
+    - tools/mtmd/legacy-models/
+source_files: []
+depends_on: []
+related_to: []

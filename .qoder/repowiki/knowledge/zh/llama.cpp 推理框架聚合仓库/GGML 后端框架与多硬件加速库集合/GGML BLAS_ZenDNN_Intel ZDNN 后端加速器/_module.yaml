@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: ggml_backend/accelerators_blas_zendnn_zdnn
+title: GGML BLAS/ZenDNN/Intel ZDNN 后端加速器
+scope:
+    - ggml/src/ggml-blas/
+    - ggml/src/ggml-zendnn/
+    - ggml/src/ggml-zdnn/
+source_files: []
+depends_on: []
+related_to:
+    - path: ggml_backend/core_runtime

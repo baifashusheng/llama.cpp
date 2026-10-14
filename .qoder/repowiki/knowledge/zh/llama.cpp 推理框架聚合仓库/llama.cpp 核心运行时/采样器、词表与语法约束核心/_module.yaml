@@ -1,0 +1,17 @@
+schema_version: 1
+module_path: llama_core/sampler_tokenizer
+title: 采样器、词表与语法约束核心
+scope:
+    - src/llama-sampler.cpp
+    - src/llama-sampler.h
+    - src/llama-grammar.cpp
+    - src/llama-grammar.h
+    - src/llama-vocab.cpp
+    - src/llama-vocab.h
+    - src/unicode.cpp
+    - src/unicode.h
+    - src/unicode-data.cpp
+    - src/unicode-data.h
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: ggml_backend/backend_sycl/attention_kernels
+title: SYCL Flash-Attention 内核调度与稀疏化
+scope:
+    - ggml/src/ggml-sycl/fattn.cpp
+    - ggml/src/ggml-sycl/fattn-tile.cpp
+    - ggml/src/ggml-sycl/fattn-sparse.cpp
+source_files: []
+depends_on: []
+related_to: []

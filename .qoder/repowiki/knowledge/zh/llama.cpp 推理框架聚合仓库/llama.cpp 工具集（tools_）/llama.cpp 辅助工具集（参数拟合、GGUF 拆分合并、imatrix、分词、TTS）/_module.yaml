@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: cli_tools/data_tools
+title: llama.cpp 辅助工具集（参数拟合、GGUF 拆分合并、imatrix、分词、TTS）
+scope:
+    - tools/fit-params/
+    - tools/gguf-split/
+    - tools/imatrix/
+    - tools/tokenize/
+    - tools/tts/
+source_files: []
+depends_on: []
+related_to:
+    - path: llama_core

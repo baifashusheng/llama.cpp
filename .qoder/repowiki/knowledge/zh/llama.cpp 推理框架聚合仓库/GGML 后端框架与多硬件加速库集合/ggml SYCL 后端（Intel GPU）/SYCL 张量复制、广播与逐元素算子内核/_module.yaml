@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: ggml_backend/backend_sycl/tensor_manipulation_kernels
+title: SYCL 张量复制、广播与逐元素算子内核
+scope:
+    - ggml/src/ggml-sycl/cpy.*
+    - ggml/src/ggml-sycl/binbcast.*
+    - ggml/src/ggml-sycl/add-id.*
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: ggml_backend/backend_opencl
+title: OpenCL 后端实现 (ggml-backend-opencl)
+scope:
+    - ggml/src/ggml-opencl/
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,14 @@
+schema_version: 1
+module_path: cli_tools/mtmd/clip_core
+title: CLIP/多模态模型推理核心
+scope:
+    - tools/mtmd/clip.cpp
+    - tools/mtmd/clip.h
+    - tools/mtmd/clip-impl.h
+    - tools/mtmd/clip-graph.h
+    - tools/mtmd/clip-model.h
+source_files: []
+depends_on: []
+related_to:
+    - path: cli_tools/mtmd/helper_and_runtime
+    - path: cli_tools/mtmd/image_backend

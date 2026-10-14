@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: cli_tools/server/tests
+title: llama-server Python 集成测试套件
+scope:
+    - tools/server/tests/
+source_files: []
+depends_on: []
+related_to:
+    - path: cli_tools/server/server_http_proxy

@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: ggml_backend/backend_sycl/elementwise_reduction_kernels
+title: SYCL 元素级归约与损失内核
+scope:
+    - ggml/src/ggml-sycl/element_wise.*
+    - ggml/src/ggml-sycl/softmax.*
+    - ggml/src/ggml-sycl/cross_entropy_loss.*
+source_files: []
+depends_on: []
+related_to: []

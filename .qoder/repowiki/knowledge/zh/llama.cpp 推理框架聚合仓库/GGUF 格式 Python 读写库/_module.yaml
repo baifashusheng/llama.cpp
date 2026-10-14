@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: gguf_py
+title: GGUF 格式 Python 读写库
+scope:
+    - gguf-py/
+source_files: []
+depends_on: []
+related_to:
+    - path: model_converters

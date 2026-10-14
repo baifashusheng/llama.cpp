@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: cli_tools/mtmd/image_backend
+title: MTMD 多模态图像后端（预处理与模型图构建）
+scope:
+    - tools/mtmd/models/
+    - tools/mtmd/mtmd-image.cpp
+    - tools/mtmd/mtmd-image.h
+source_files: []
+depends_on: []
+related_to:
+    - path: cli_tools/mtmd/clip_core

@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: cli_tools/inference_benchmarks
+title: 推理基准与结果工具集
+scope:
+    - tools/llama-bench/
+    - tools/batched-bench/
+    - tools/perplexity/
+    - tools/results/
+source_files: []
+depends_on: []
+related_to:
+    - path: llama_core

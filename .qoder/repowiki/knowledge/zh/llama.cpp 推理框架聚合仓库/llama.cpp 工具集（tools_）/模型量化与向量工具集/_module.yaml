@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: cli_tools/quantization_tools
+title: 模型量化与向量工具集
+scope:
+    - tools/quantize/
+    - tools/export-lora/
+    - tools/cvector-generator/
+source_files: []
+depends_on: []
+related_to:
+    - path: llama_core

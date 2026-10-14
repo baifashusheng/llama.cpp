@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: cli_tools/tuning
+title: ggml-metal 离线内核参数调优器
+scope:
+    - tools/tuning/
+source_files: []
+depends_on: []
+related_to: []

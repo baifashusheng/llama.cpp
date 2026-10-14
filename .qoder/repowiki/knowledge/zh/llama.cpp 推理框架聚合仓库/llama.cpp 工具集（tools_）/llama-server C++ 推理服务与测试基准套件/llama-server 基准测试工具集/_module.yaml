@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: cli_tools/server/benchmarks
+title: llama-server 基准测试工具集
+scope:
+    - tools/server/bench/
+source_files: []
+depends_on: []
+related_to:
+    - path: cli_tools/server/server_streaming_queue_task

@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: ggml_backend/backend_sycl/linear_algebra_kernels
+title: SYCL GEMM 与 Dequantize-MatVec 内核
+scope:
+    - ggml/src/ggml-sycl/fused-gemm.*
+    - ggml/src/ggml-sycl/gemm.hpp
+    - ggml/src/ggml-sycl/dmmv.*
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: ggml_backend/backend_cuda/kernel_dispatch
+title: GGML CUDA 后端内核实现与模板实例化
+scope:
+    - ggml/src/ggml-cuda/
+source_files: []
+depends_on: []
+related_to: []

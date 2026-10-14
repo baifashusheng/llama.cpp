@@ -1,0 +1,23 @@
+schema_version: 1
+module_path: llama_core/kv_cache_memory
+title: KV Cache 与 LLM 内存抽象层
+scope:
+    - src/llama-kv-cache.cpp
+    - src/llama-kv-cache.h
+    - src/llama-kv-cache-dsa.cpp
+    - src/llama-kv-cache-dsv4.cpp
+    - src/llama-kv-cache-iswa.cpp
+    - src/llama-kv-cache-msa.cpp
+    - src/llama-kv-cache-dsa-iswa.cpp
+    - src/llama-kv-cells.h
+    - src/llama-memory.cpp
+    - src/llama-memory.h
+    - src/llama-memory-hybrid.cpp
+    - src/llama-memory-hybrid-idx.cpp
+    - src/llama-memory-hybrid-iswa.cpp
+    - src/llama-memory-recurrent.cpp
+    - src/llama-moe-cache.cpp
+    - src/llama-moe-cache.h
+source_files: []
+depends_on: []
+related_to: []

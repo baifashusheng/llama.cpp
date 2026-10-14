@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: ggml_backend/backend_sycl/quantized_matmul_kernels
+title: GGML SYCL 量化矩阵/向量乘内核与反量化原语
+scope:
+    - ggml/src/ggml-sycl/mmq.*
+    - ggml/src/ggml-sycl/mmvq.*
+    - ggml/src/ggml-sycl/dequantize.hpp
+source_files: []
+depends_on: []
+related_to: []

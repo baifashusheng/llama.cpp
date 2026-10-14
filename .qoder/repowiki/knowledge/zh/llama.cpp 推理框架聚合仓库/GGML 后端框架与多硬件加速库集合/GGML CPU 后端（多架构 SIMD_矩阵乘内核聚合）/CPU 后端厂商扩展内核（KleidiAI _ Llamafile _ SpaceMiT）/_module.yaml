@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: ggml_backend/backend_cpu/vendor_extensions
+title: CPU 后端厂商扩展内核（KleidiAI / Llamafile / SpaceMiT）
+scope:
+    - ggml/src/ggml-cpu/kleidiai/
+    - ggml/src/ggml-cpu/llamafile/
+    - ggml/src/ggml-cpu/spacemit/
+source_files: []
+depends_on: []
+related_to: []

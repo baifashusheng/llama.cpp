@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: cli_tools/mtmd
+title: llama.cpp MTMD 多模态推理子系统
+scope:
+    - tools/mtmd/
+source_files: []
+depends_on: []
+related_to: []

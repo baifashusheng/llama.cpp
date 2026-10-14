@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: ggml_backend/backend_sycl/memory_and_hardware
+title: SYCL 后端内存与硬件信息探测
+scope:
+    - ggml/src/ggml-sycl/mem.*
+    - ggml/src/ggml-sycl/memtrace.*
+    - ggml/src/ggml-sycl/sycl_hw.*
+source_files: []
+depends_on: []
+related_to: []

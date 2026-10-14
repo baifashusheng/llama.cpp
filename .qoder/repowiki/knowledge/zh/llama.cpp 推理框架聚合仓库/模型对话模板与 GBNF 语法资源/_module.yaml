@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: assets_and_templates
+title: 模型对话模板与 GBNF 语法资源
+scope:
+    - models/templates/
+    - grammars/
+source_files: []
+depends_on: []
+related_to:
+    - path: common_lib

@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: ggml_backend/backend_sycl/core_infrastructure
+title: ggml-sycl 后端核心基础设施
+scope:
+    - ggml/src/ggml-sycl/backend.hpp
+    - ggml/src/ggml-sycl/base.hpp
+    - ggml/src/ggml-sycl/common.*
+source_files: []
+depends_on: []
+related_to: []

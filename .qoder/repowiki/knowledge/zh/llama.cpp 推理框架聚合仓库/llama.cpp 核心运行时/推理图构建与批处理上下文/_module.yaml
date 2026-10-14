@@ -1,0 +1,20 @@
+schema_version: 1
+module_path: llama_core/graph_batch_context
+title: 推理图构建与批处理上下文
+scope:
+    - src/llama-graph.cpp
+    - src/llama-graph.h
+    - src/llama-batch.cpp
+    - src/llama-batch.h
+    - src/llama-context.cpp
+    - src/llama-context.h
+    - src/llama-chat.cpp
+    - src/llama-chat.h
+    - src/llama-io.cpp
+    - src/llama-io.h
+    - src/llama-ext.h
+    - src/llama-adapter.cpp
+    - src/llama-adapter.h
+source_files: []
+depends_on: []
+related_to: []

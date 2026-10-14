@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: ggml_backend/backend_vulkan
+title: GGML Vulkan GPU 后端
+scope:
+    - ggml/src/ggml-vulkan/
+source_files: []
+depends_on: []
+related_to: []

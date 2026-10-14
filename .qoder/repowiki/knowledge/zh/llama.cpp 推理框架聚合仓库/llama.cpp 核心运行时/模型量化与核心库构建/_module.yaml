@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: llama_core/quant_and_core
+title: 模型量化与核心库构建
+scope:
+    - src/llama-quant.cpp
+    - src/llama-quant.h
+    - src/llama.cpp
+    - src/CMakeLists.txt
+source_files: []
+depends_on: []
+related_to: []

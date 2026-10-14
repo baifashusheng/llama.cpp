@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: cli_tools/server/server_streaming_queue_task
+title: 服务端流式生成、任务队列与响应管道
+scope:
+    - tools/server/server-stream.*
+    - tools/server/server-queue.*
+    - tools/server/server-task.*
+source_files: []
+depends_on: []
+related_to:
+    - path: cli_tools/server/benchmarks
+    - path: cli_tools/server/server_chat

@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: ggml_backend/backend_cpu
+title: GGML CPU 后端（多架构 SIMD/矩阵乘内核聚合）
+scope:
+    - ggml/src/ggml-cpu/
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: ggml_backend/backend_cuda/vendor_backends
+title: CUDA/HIP/MUSA 后端厂商适配头文件
+scope:
+    - ggml/src/ggml-cuda/vendors/
+source_files: []
+depends_on: []
+related_to: []

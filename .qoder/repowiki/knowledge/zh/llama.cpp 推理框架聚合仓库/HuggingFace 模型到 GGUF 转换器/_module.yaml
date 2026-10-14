@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: model_converters
+title: HuggingFace 模型到 GGUF 转换器
+scope:
+    - conversion/
+source_files: []
+depends_on: []
+related_to:
+    - path: gguf_py

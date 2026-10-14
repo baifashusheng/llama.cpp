@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: ggml_backend/backend_rpc
+title: ggml RPC 后端（TCP/RDMA 传输层）
+scope:
+    - ggml/src/ggml-rpc/
+source_files: []
+depends_on: []
+related_to:
+    - path: cli_tools/cli_tools
